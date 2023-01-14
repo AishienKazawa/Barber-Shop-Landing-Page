@@ -20,10 +20,8 @@ let poleTop = `
 </div>
 
 `;
-
+$(".loading").prepend(poleTop);
 $(window).on("load", function () {
-  $(".loading").prepend(poleTop);
-
   $("#loading").fadeOut(500);
 
   //register gsap library
