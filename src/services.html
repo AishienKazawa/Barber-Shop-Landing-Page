@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+
+    <link rel="stylesheet" href="./public/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+  </head>
+  <body class="bg-neutral-200" id="services" aria-busy="true">
+    <!-- header -->
+    <header class="header container-fluid fixed-top text-neutral-300">
+      <!-- top bar header -->
+      <div class="header_media container flex-items-between text-primary-200">
+        <!-- contact details -->
+        <div class="media_contact flex-items-between">
+          <div class="contact_item">
+            <img src="./assets/icons/phone.svg" alt="" class="icon-small" />
+            <p>+63 995 403 7689</p>
+          </div>
+          <div class="contact_item">
+            <img src="./assets/icons/at.svg" alt="" class="icon-small" />
+            <p>logoname@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- social media -->
+        <div class="media_platform">
+          <p>follow us:</p>
+          <ul role="list" class="media_links">
+            <li>
+              <a
+                role="button"
+                href="https://www.facebook.com/"
+                class="btn btn-link"
+              >
+                <img
+                  src="./assets/icons/facebook.svg"
+                  alt=""
+                  class="icon-small"
+                />
+              </a>
+            </li>
+            <li>
+              <a role="button" href="https://twitter.com/" class="btn btn-link">
+                <img
+                  src="./assets/icons/twitter.svg"
+                  alt=""
+                  class="icon-small"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                role="button"
+                href="https://www.instagram.com/"
+                class="btn btn-link"
+              >
+                <img
+                  src="./assets/icons/instagram.svg"
+                  alt=""
+                  class="icon-small"
+                />
+              </a>
+            </li>
+
+            <li>
+              <a
+                role="button"
+                href="https://www.linkedin.com"
+                class="btn btn-link"
+              >
+                <img
+                  src="./assets/icons/linkedin.svg"
+                  alt=""
+                  class="icon-small"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- bottom bar header -->
+      <div class="header_nav container flex-items-between">
+        <!-- brandname / logo -->
+        <a href="/" class="nav_logo logo">BARBERO</a>
+
+        <!-- mobile menu -->
+        <button type="button" id="menuBtn" class="nav_menu">
+          <img src="./assets/icons/menu.svg" alt="" />
+        </button>
+
+        <!-- backdrop for mobile -->
+        <div class="backdrop-overlay"></div>
+
+        <!-- nav links -->
+        <div class="navbar_nav">
+          <div class="navbar_nav-scroll">
+            <ul role="list" class="nav_list">
+              <li class="nav_item dropdown">
+                <div class="flex-items-between" id="1">
+                  <a class="nav_link" role="button"> Home </a>
+
+                  <img
+                    src="./assets/icons/arrow_down.svg"
+                    alt=""
+                    class="dropdown_arrow"
+                  />
+                </div>
+
+                <ul role="list" class="dropdown-menu">
+                  <li class="nav_item">
+                    <a href="/" class="nav_link">Homepage #1</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="/home_b.html" class="nav_link">Homepage #2</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="/home_c.html" class="nav_link">Homepage #3</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav_item">
+                <a href="/about.html" class="nav_link">About</a>
+              </li>
+
+              <li class="nav_item dropdown">
+                <div class="flex-items-between">
+                  <a class="nav_link" role="button"> Pages </a>
+
+                  <img
+                    src="./assets/icons/arrow_down.svg"
+                    alt=""
+                    class="dropdown_arrow"
+                  />
+                </div>
+                <ul role="list" class="dropdown-menu">
+                  <li class="nav_item">
+                    <a href="/contact.html" class="nav_link">Contact</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="/services.html" class="nav_link">Services</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="/membership.html" class="nav_link">Membership</a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- logo -->
+              <li class="nav_item logo">
+                <a href="/" class="nav_link">BARBERO</a>
+              </li>
+
+              <li class="nav_item">
+                <a href="#" class="nav_link a_link" data-scroll-to="">Team</a>
+              </li>
+
+              <li class="nav_item">
+                <a href="#" class="nav_link a_link" data-scroll-to="">Price</a>
+              </li>
+
+              <li class="nav_item">
+                <a href="/contact.html" class="nav_link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="loading" id="loading"></div>
+
+    <!-- main -->
+    <main class="text-primary-200" data-scroll-container>
+      <!-- hero -->
+      <section class="hero" data-scroll-section>
+        <div class="hero_container container">
+          <div class="hero_headings">
+            <h2 class="headline">Services</h2>
+            <ul role="list" class="breadcrumbs">
+              <li class="breadcrumb-item">Home</li>
+              <li class="breadcrumb-item">Services</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- services -->
+      <section class="service" data-scroll-section>
+        <div class="service_container container row row-md-2 g-md-3">
+          <div class="service_item col">
+            <div class="col">
+              <div class="service_headings">
+                <p class="kicker text-accent-100">WE OFFER</p>
+                <h3 class="headline fw-500">Classic Haircut</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Eget justo vivamus
+                gravida congue. Egestas augue donec adipiscing in arcu aliquet.
+                Adipiscing urna ipsum risus ridiculus mauris. Pellentesque sem.
+              </p>
+              <p>
+                Rutrum amet sed arcu duis eros. Vitae diam vestibulum quam vitae
+                eleifend eget semper volutpat risus. Cursus etiam ut at
+                facilisis dolor augue facilisi. In lorem sit nullam vehicula
+                elementum. Et convallis ut ut in at.
+              </p>
+            </div>
+
+            <div class="col">
+              <img src="./assets/Rectangle 395.png" alt="" />
+            </div>
+          </div>
+
+          <div class="service_item col">
+            <div class="col">
+              <div class="service_headings">
+                <p class="kicker text-accent-100">WE OFFER</p>
+                <h3 class="headline fw-500">Hair Styling</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Eget justo vivamus
+                gravida congue. Egestas augue donec adipiscing in arcu aliquet.
+                Adipiscing urna ipsum risus ridiculus mauris. Pellentesque sem.
+              </p>
+              <p>
+                Rutrum amet sed arcu duis eros. Vitae diam vestibulum quam vitae
+                eleifend eget semper volutpat risus. Cursus etiam ut at
+                facilisis dolor augue facilisi. In lorem sit nullam vehicula
+                elementum. Et convallis ut ut in at.
+              </p>
+            </div>
+
+            <div class="col">
+              <img src="./assets/Rectangle 394.png" alt="" />
+            </div>
+          </div>
+
+          <div class="service_item col">
+            <div class="col">
+              <div class="service_headings">
+                <p class="kicker text-accent-100">WE OFFER</p>
+                <h3 class="headline fw-500">Shaving</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Eget justo vivamus
+                gravida congue. Egestas augue donec adipiscing in arcu aliquet.
+                Adipiscing urna ipsum risus ridiculus mauris. Pellentesque sem.
+              </p>
+              <p>
+                Rutrum amet sed arcu duis eros. Vitae diam vestibulum quam vitae
+                eleifend eget semper volutpat risus. Cursus etiam ut at
+                facilisis dolor augue facilisi. In lorem sit nullam vehicula
+                elementum. Et convallis ut ut in at.
+              </p>
+            </div>
+
+            <div class="col">
+              <img src="./assets/Rectangle 394.png" alt="" />
+            </div>
+          </div>
+
+          <div class="service_item col">
+            <div class="col">
+              <div class="service_headings">
+                <p class="kicker text-accent-100">WE OFFER</p>
+                <h3 class="headline fw-500">Facial Massage</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Eget justo vivamus
+                gravida congue. Egestas augue donec adipiscing in arcu aliquet.
+                Adipiscing urna ipsum risus ridiculus mauris. Pellentesque sem.
+              </p>
+              <p>
+                Rutrum amet sed arcu duis eros. Vitae diam vestibulum quam vitae
+                eleifend eget semper volutpat risus. Cursus etiam ut at
+                facilisis dolor augue facilisi. In lorem sit nullam vehicula
+                elementum. Et convallis ut ut in at.
+              </p>
+            </div>
+
+            <div class="col">
+              <img src="./assets/Rectangle 394.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer
+        class="footer bg-neutral-200 text-primary-200"
+        data-scroll-section
+      >
+        <div class="footer_container container row row-lg-3">
+          <!-- first column -->
+          <div class="footer_col col">
+            <a href="/" class="logo">BARBERO</a>
+
+            <p class="logo_desc">
+              Lorem ipsum dolor sit amet consectetur. Viverra risus nibh
+              pellentesque morbi lobortis nunc. Eu ullamcorper aenean cursus ac.
+              Mauris mauris viverra tempus mattis amet mauris.
+            </p>
+
+            <div class="footer_soc">
+              <a role="button" href="https://www.facebook.com/" class="btn">
+                <img src="./assets/icons/facebook.svg" alt="" />
+              </a>
+              <a role="button" href="https://twitter.com/" class="btn">
+                <img src="./assets/icons/twitter.svg" alt="" />
+              </a>
+              <a role="button" href="https://www.instagram.com/" class="btn">
+                <img src="./assets/icons/instagram.svg" alt="" />
+              </a>
+              <a role="button" href="https://www.linkedin.com" class="btn">
+                <img src="./assets/icons/linkedin.svg" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <!-- second column -->
+          <div class="footer_col col">
+            <!-- headline -->
+            <h6 class="headline fw-600">Instagram</h6>
+
+            <!-- instagram post grid -->
+            <div class="instagram_post row row-xs-4 row-md-8 row-lg-4">
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in1.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in2.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in3.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in4.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in5.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in6.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in7.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in8.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- third column -->
+          <div class="footer_col col">
+            <!-- headline -->
+            <h6 class="headline fw-600">Newsletter</h6>
+
+            <div>
+              <!-- form newsletter -->
+              <form class="form">
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Your email address"
+                  class="form_control"
+                />
+                <button type="submit" class="btn btn-accent-100">
+                  Subscribe
+                </button>
+              </form>
+
+              <p class="newsletter_warning opacity-8">
+                Lorem ipsum dolor sit amet consectetur. Risus volutpat elit
+                consectetur sagittis molestie lobortis tellus velit.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer_extra container bg-neutral-300">
+          <p>© 2023 . mark rencie nolasco</p>
+
+          <ul role="list" class="nav_links">
+            <li class="nav_list">
+              <a href="/" class="nav_link">Home</a>
+            </li>
+            <li class="nav_list">
+              <a href="/about.html" class="nav_link">About</a>
+            </li>
+            <li class="nav_list">
+              <a href="/services.html" class="nav_link">Services</a>
+            </li>
+            <li class="nav_list">
+              <a href="#price" class="nav_link a_link" data-scroll-to=""
+                >Price</a
+              >
+            </li>
+            <li class="nav_list">
+              <a href="#team" class="nav_link a_link" data-scroll-to="">Team</a>
+            </li>
+            <li class="nav_list">
+              <a href="/contact.html" class="nav_link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+  </body>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+    integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/CSSRulePlugin.min.js"
+    integrity="sha512-TJiE9joKYXjdf5nd0Kkzqt9QOYfp5Hk5W/PaeRmpOd7HYBVdSqpTxJezbfLzJnPrS7HGnalR54WO/hbppgDgkw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script defer type="text/javascript" src="./js/script.js"></script>
+</html>

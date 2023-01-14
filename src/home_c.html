@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage: Demo #3</title>
+
+    <link rel="stylesheet" href="./public/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/css/lightgallery-bundle.min.css"
+      integrity="sha512-nUqPe0+ak577sKSMThGcKJauRI7ENhKC2FQAOOmdyCYSrUh0GnwLsZNYqwilpMmplN+3nO3zso8CWUgu33BDag=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="bg-primary-100" id="home" aria-busy="true">
+    <!-- header -->
+    <header class="header container-fluid fixed-top text-neutral-300">
+      <!-- top bar header -->
+      <div class="header_media container flex-items-between text-primary-200">
+        <!-- contact details -->
+        <div class="media_contact flex-items-between">
+          <div class="contact_item">
+            <img src="./assets/icons/phone.svg" alt="" class="icon-small" />
+            <p>+63 995 403 7689</p>
+          </div>
+          <div class="contact_item">
+            <img src="./assets/icons/at.svg" alt="" class="icon-small" />
+            <p>logoname@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- social media -->
+        <div class="media_platform">
+          <p>follow us:</p>
+          <ul role="list" class="media_links">
+            <li>
+              <a
+                role="button"
+                href="https://www.facebook.com/"
+                class="btn btn-link"
+              >
+                <img
+                  src="./assets/icons/facebook.svg"
+                  alt=""
+                  class="icon-small"
+                />
+              </a>
+            </li>
+            <li>
+              <a role="button" href="https://twitter.com/" class="btn btn-link">
+                <img
+                  src="./assets/icons/twitter.svg"
+                  alt=""
+                  class="icon-small"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                role="button"
+                href="https://www.instagram.com/"
+                class="btn btn-link"
+              >
+                <img
+                  src="./assets/icons/instagram.svg"
+                  alt=""
+                  class="icon-small"
+                />
+              </a>
+            </li>
+
+            <li>
+              <a
+                role="button"
+                href="https://www.linkedin.com"
+                class="btn btn-link"
+              >
+                <img
+                  src="./assets/icons/linkedin.svg"
+                  alt=""
+                  class="icon-small"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- bottom bar header -->
+      <div class="header_nav container flex-items-between">
+        <!-- brandname / logo -->
+        <a href="/" class="nav_logo logo">BARBERO</a>
+
+        <!-- mobile menu -->
+        <button type="button" id="menuBtn" class="nav_menu">
+          <img src="./assets/icons/menu.svg" alt="" />
+        </button>
+
+        <!-- backdrop for mobile -->
+        <div class="backdrop-overlay"></div>
+
+        <!-- nav links -->
+        <div class="navbar_nav">
+          <div class="navbar_nav-scroll">
+            <ul role="list" class="nav_list">
+              <li class="nav_item dropdown">
+                <div class="flex-items-between" id="1">
+                  <a class="nav_link" role="button"> Home </a>
+
+                  <img
+                    src="./assets/icons/arrow_down.svg"
+                    alt=""
+                    class="dropdown_arrow"
+                  />
+                </div>
+
+                <ul role="list" class="dropdown-menu">
+                  <li class="nav_item">
+                    <a href="/" class="nav_link">Homepage #1</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="/home_b.html" class="nav_link">Homepage #2</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="/home_c.html" class="nav_link">Homepage #3</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav_item">
+                <a href="/about.html" class="nav_link">About</a>
+              </li>
+
+              <li class="nav_item dropdown">
+                <div class="flex-items-between">
+                  <a class="nav_link" role="button"> Pages </a>
+
+                  <img
+                    src="./assets/icons/arrow_down.svg"
+                    alt=""
+                    class="dropdown_arrow"
+                  />
+                </div>
+                <ul role="list" class="dropdown-menu">
+                  <li class="nav_item">
+                    <a href="/contact.html" class="nav_link">Contact</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="/services.html" class="nav_link">Services</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="/membership.html" class="nav_link">Membership</a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- logo -->
+              <li class="nav_item logo">
+                <a href="/" class="nav_link">BARBERO</a>
+              </li>
+
+              <li class="nav_item">
+                <a href="#team" class="nav_link a_link" data-scroll-to=""
+                  >Team</a
+                >
+              </li>
+
+              <li class="nav_item">
+                <a href="#shop" class="nav_link a_link" data-scroll-to=""
+                  >Shop</a
+                >
+              </li>
+
+              <li class="nav_item">
+                <a href="/contact.html" class="nav_link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="loading" id="loading"></div>
+
+    <!-- main -->
+    <main class="text-primary-200" data-scroll-container>
+      <!-- hero section -->
+      <section class="hero c" data-scroll-section>
+        <!-- logo or symbol for a company -->
+        <div
+          class="hero_headings col-xs-11 col-lg-8 col-xl-6 position-centered"
+        >
+          <img
+            src="./assets/hero-logo.svg"
+            alt="img centered"
+            class="hero_logo"
+          />
+          <h1 class="hero_headline fw-600">We Offer the Best Look On You</h1>
+          <p class="sub_headline">
+            Lorem ipsum dolor sit amet consectetur. Dictum donec id egestas
+            mattis lacus.
+          </p>
+        </div>
+      </section>
+
+      <!-- about section -->
+      <section class="about c" data-scroll-section>
+        <div class="about_container container row row-lg-2">
+          <!-- left side  -->
+          <div class="container_ls col-lg-5">
+            <img
+              src="./assets/barbershop_book-bg2.png"
+              alt=""
+              class="img-overlap"
+              data-scroll
+              data-scroll-speed="1"
+            />
+
+            <div class="col">
+              <div
+                class="schedule_card position-centered"
+                data-scroll
+                data-scroll-speed="2"
+              >
+                <div class="schedule_plan">
+                  <img src="./assets/schedule-logo.svg" alt="" />
+
+                  <div class="schedule_date">
+                    <p class="headline text-accent-100">Monday to Thursday</p>
+                    <h5 class="fw-400">7:30AM <span></span> 6:00PM</h5>
+                  </div>
+                  <div class="schedule_date">
+                    <p class="headline text-accent-100">Friday</p>
+                    <h5 class="fw-400">1:00PM <span></span> 7:30PM</h5>
+                  </div>
+                  <div class="schedule_date">
+                    <p class="headline text-accent-100">Saturday</p>
+                    <h5 class="fw-400">9:30AM <span></span> 5:30PM</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- right side -->
+          <div class="container_rs col-lg-6 text-primary-200">
+            <div class="about_headings">
+              <p class="kicker text-neutral-300">BARBER SHOP</p>
+              <h2 class="headline text-neutral-300 fw-600">
+                <mark class="text-accent-100">Modern</mark> Ways of Barber Shop
+                & Shave
+              </h2>
+            </div>
+
+            <span class="separator-double bg-neutral-300"></span>
+            <p class="about_brief text-neutral-300">
+              Lorem ipsum dolor sit amet consectetur. Mattis amet nunc euismod
+              ultrices. Donec pretium viverra mauris morbi ultricies feugiat eu.
+              Accumsan nibh sed vestibulum maecenas. Diam auctor sit et massa.
+              Duis sem ultricies et porttitor eleifend tempor. Urna leo id
+              consectetur ornare interdum felis eu pellentesque.
+            </p>
+
+            <img src="./assets/signature.png" alt="" class="signature" />
+          </div>
+        </div>
+      </section>
+
+      <!-- service section -->
+      <section class="service container c" data-scroll-section>
+        <!-- headings -->
+        <div class="service_headings col-lg-4">
+          <p class="kicker text-accent-100">WHAT WE OFFER</p>
+          <h2 class="headline fw-600 text-primary-200">
+            Our best services that make your value increase
+          </h2>
+        </div>
+
+        <div class="service_cards row row-md-2 row-lg-4 gy-xs-2 g-md-2">
+          <div class="col">
+            <div class="service_card bg-neutral-100 card">
+              <!-- legend / icon -->
+              <span class="category_legend rounded-circle bg-accent-100">
+                <img src="./assets/barbershop_pricing-cream.png" alt="" />
+              </span>
+
+              <h3 class="service_name fw-500">Facial Massage</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Odio vitae praesent
+                dignissim volutpat ut. Phasellus nisi est enim id egestas nec.
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="service_card bg-neutral-100 card">
+              <!-- legend / icon -->
+              <span class="category_legend rounded-circle bg-accent-100">
+                <img src="./assets/barbershop_pricing-razor.png" alt="" />
+              </span>
+
+              <h3 class="service_name fw-500">Trimming</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Odio vitae praesent
+                dignissim volutpat ut. Phasellus nisi est enim id egestas nec.
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="service_card bg-neutral-100 card">
+              <!-- legend / icon -->
+              <span class="category_legend rounded-circle bg-accent-100">
+                <img src="./assets/barbershop_pricing-dryer.png" alt="" />
+              </span>
+
+              <h3 class="service_name fw-500">Haircut</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Odio vitae praesent
+                dignissim volutpat ut. Phasellus nisi est enim id egestas nec.
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="service_card bg-neutral-100 card">
+              <!-- legend / icon -->
+              <span class="category_legend rounded-circle bg-accent-100">
+                <img src="./assets/barbershop_pricing-shave.png" alt="" />
+              </span>
+
+              <h3 class="service_name fw-500">Shaving</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Odio vitae praesent
+                dignissim volutpat ut. Phasellus nisi est enim id egestas nec.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- get in touch -->
+      <section class="git c" data-scroll-section>
+        <div class="git_container container">
+          <!-- form -->
+          <div class="form_wrapper col-lg-5 bg-primary-100">
+            <!-- headings -->
+            <div class="form_headings text-neutral-200">
+              <p class="kicker">BE OUR GUEST</p>
+              <h3 class="headline">Book a Seat</h3>
+            </div>
+
+            <!-- form -->
+
+            <form class="form">
+              <div class="row row-md-2">
+                <div class="col">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Name"
+                    class="form_control"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Email Address"
+                    class="form_control"
+                  />
+                </div>
+              </div>
+
+              <div class="row row-md-2">
+                <div class="col">
+                  <input
+                    type="text"
+                    name="contact"
+                    id="contact"
+                    placeholder="Contact Number"
+                    class="form_control"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="text"
+                    name="date"
+                    id="date"
+                    placeholder="Date"
+                    class="form_control"
+                  />
+                </div>
+              </div>
+
+              <div class="col">
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="8"
+                  placeholder="Your message here..."
+                  class="form_control"
+                ></textarea>
+              </div>
+
+              <div class="col submit">
+                <button type="submit" class="btn btn-accent-100 rounded-circle">
+                  Book Now
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- team section -->
+      <section class="team c" id="team" data-scroll-section>
+        <div class="team_container container">
+          <!-- headings -->
+          <div class="team_headings">
+            <p class="kicker text-accent-100">PROFESSIONALS</p>
+            <h3 class="headline fw-600">Our Licensed Barbers</h3>
+          </div>
+
+          <!-- team members -->
+          <div
+            class="team_members row row-md-2 row-lg-3 g-xs-2 g-md-2 g-lg-4 justify-content-center"
+          >
+            <div class="member col">
+              <div class="img_wrapper scaling">
+                <img src="./assets/barbershop_team-member-1.png" alt="" />
+              </div>
+
+              <div>
+                <h5 class="member_name fw-600">Robert Jam</h5>
+                <div class="member_soc">
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/twitter.svg" alt="" />
+                  </a>
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/facebook.svg" alt="" />
+                  </a>
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/instagram.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="member col">
+              <div class="img_wrapper scaling">
+                <img src="./assets/barbershop_team-member-2.png" alt="" />
+              </div>
+
+              <div>
+                <h5 class="member_name fw-600">Samuel Miko</h5>
+                <div class="member_soc">
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/twitter.svg" alt="" />
+                  </a>
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/facebook.svg" alt="" />
+                  </a>
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/instagram.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="member col">
+              <div class="img_wrapper scaling">
+                <img src="./assets/barbershop_team-member-3.png" alt="" />
+              </div>
+
+              <div>
+                <h5 class="member_name fw-600">Danny Franks</h5>
+                <div class="member_soc">
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/twitter.svg" alt="" />
+                  </a>
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/facebook.svg" alt="" />
+                  </a>
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/instagram.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- shop section -->
+      <section class="shop bg-primary-200" id="shop" data-scroll-section>
+        <div class="shop_container container">
+          <!-- headings -->
+          <div class="shop_headings">
+            <p class="kicker text-neutral-300">WHAT WE HAVE</p>
+            <h3 class="headline text-neutral-300 fw-600">Our Products</h3>
+          </div>
+
+          <!-- product cards -->
+          <div class="swiper shop_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide product card bg-primary-100">
+                <!-- product image -->
+                <img
+                  src="./assets/barbershop_shop-shave.png"
+                  alt=""
+                  class="product_img"
+                />
+
+                <!-- product details -->
+                <div class="card_body text-neutral-300">
+                  <h3 class="product_name">The Signature Straight Razor</h3>
+                  <h5 class="product_category opacity-5">Brent Berkeley</h5>
+                  <img
+                    src="./assets/icons/stars.svg"
+                    alt=""
+                    class="product_rating"
+                  />
+                  <p class="product_review">120 reviews</p>
+                  <h3 class="product_price">$20.00</h3>
+                </div>
+              </div>
+
+              <div class="swiper-slide product card bg-primary-100">
+                <!-- product image -->
+                <img
+                  src="./assets/barbershop_shop-brush.png"
+                  alt=""
+                  class="product_img"
+                />
+
+                <!-- product details -->
+                <div class="card_body text-neutral-300">
+                  <h3 class="product_name">The Original Shaving Brush</h3>
+                  <h5 class="product_category opacity-5">vie - long</h5>
+                  <img
+                    src="./assets/icons/stars.svg"
+                    alt=""
+                    class="product_rating"
+                  />
+                  <p class="product_review">120 reviews</p>
+                  <h3 class="product_price">$20.00</h3>
+                </div>
+              </div>
+
+              <div class="swiper-slide product card bg-primary-100">
+                <!-- product image -->
+                <img
+                  src="./assets/barbershop_shop-cream.png"
+                  alt=""
+                  class="product_img"
+                />
+
+                <!-- product details -->
+                <div class="card_body text-neutral-300">
+                  <h3 class="product_name">Premium Shaving Cream</h3>
+                  <h5 class="product_category opacity-5">EDWIN JAGGER</h5>
+                  <img
+                    src="./assets/icons/stars.svg"
+                    alt=""
+                    class="product_rating"
+                  />
+                  <p class="product_review">120 reviews</p>
+                  <h3 class="product_price">$20.00</h3>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- testimonial section -->
+      <section class="testimonial a bg-neutral-200" data-scroll-section>
+        <div class="testimonial_section container">
+          <!-- headings -->
+          <div class="testimonial_headings">
+            <p class="kicker text-accent-100">TESTIMONIALS</p>
+            <h3 class="headline">We Care About People Experience Too</h3>
+          </div>
+
+          <!-- client testimony -->
+
+          <div
+            class="row row-md-2 row-lg-3 gy-xs-4 g-md-3 justify-content-center"
+          >
+            <div class="col">
+              <div class="client_wrapper bg-neutral-100">
+                <img
+                  src="./assets/barbershop_testimonial-1.png"
+                  alt=""
+                  class="client_profile rounded-circle"
+                />
+
+                <div class="client_body">
+                  <h5 class="client_name headline text-accent-100 fw-600">
+                    Thomas Drake
+                  </h5>
+                  <span class="client_date headline fw-600">Jan 03, 2022</span>
+                  <p class="client_testimony">
+                    Lorem ipsum dolor sit amet consectetur. Sed suspendisse
+                    ultrices id nunc bibendum tellus diam. Non eu viverra mattis
+                    nullam eget adipiscing nibh.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="client_wrapper bg-neutral-100">
+                <img
+                  src="./assets/barbershop_testimonial-2.png"
+                  alt=""
+                  class="client_profile rounded-circle"
+                />
+
+                <div class="client_body">
+                  <h5 class="client_name headline text-accent-100 fw-600">
+                    Jennifer Mendez
+                  </h5>
+                  <span class="client_date headline fw-600">Jan 03, 2022</span>
+                  <p class="client_testimony">
+                    Lorem ipsum dolor sit amet consectetur. Sed suspendisse
+                    ultrices id nunc bibendum tellus diam. Non eu viverra mattis
+                    nullam eget adipiscing nibh.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="client_wrapper bg-neutral-100">
+                <img
+                  src="./assets/barbershop_testimonial-3.png"
+                  alt=""
+                  class="client_profile rounded-circle"
+                />
+
+                <div class="client_body">
+                  <h5 class="client_name headline text-accent-100 fw-600">
+                    Cathy Ferrez
+                  </h5>
+                  <span class="client_date headline fw-600">Jan 03, 2022</span>
+                  <p class="client_testimony">
+                    Lorem ipsum dolor sit amet consectetur. Sed suspendisse
+                    ultrices id nunc bibendum tellus diam. Non eu viverra mattis
+                    nullam eget adipiscing nibh.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- gallery section -->
+      <section class="gallery c" data-scroll-section>
+        <div class="gallery_container container">
+          <!-- headings -->
+          <div class="gallery_headings col-lg-6 text-neutral-300">
+            <p class="kicker">GALLERY</p>
+            <h3 class="headline">Our Memories</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Dis molestie ornare id
+              volutpat pellentesque. Massa eros id rhoncus ullamcorper.
+            </p>
+          </div>
+
+          <!-- gallery -->
+          <div class="gallery-grid" id="lightgallery">
+            <a
+              class="gallery_wrapper col"
+              data-src="./assets/barbershop_gallery-1.png"
+            >
+              <img src="./assets/barbershop_gallery-1.png" />
+
+              <div class="view_wrapper position-centered">
+                <img src="./assets/icons/search.svg" alt="" />
+              </div>
+            </a>
+            <a
+              class="gallery_wrapper col"
+              data-src="./assets/barbershop_gallery-2.png"
+            >
+              <img src="./assets/barbershop_gallery-2.png" />
+
+              <div class="view_wrapper position-centered">
+                <img src="./assets/icons/search.svg" alt="" />
+              </div>
+            </a>
+            <a
+              class="gallery_wrapper col"
+              data-src="./assets/barbershop_gallery-3.png"
+            >
+              <img src="./assets/barbershop_gallery-3.png" />
+
+              <div class="view_wrapper position-centered">
+                <img src="./assets/icons/search.svg" alt="" />
+              </div>
+            </a>
+            <a
+              class="gallery_wrapper col"
+              data-src="./assets/barbershop_gallery-4.png"
+            >
+              <img src="./assets/barbershop_gallery-4.png" />
+
+              <div class="view_wrapper position-centered">
+                <img src="./assets/icons/search.svg" alt="" />
+              </div>
+            </a>
+            <a
+              class="gallery_wrapper col"
+              data-src="./assets/barbershop_gallery-5.png"
+            >
+              <img src="./assets/barbershop_gallery-5.png" />
+
+              <div class="view_wrapper position-centered">
+                <img src="./assets/icons/search.svg" alt="" />
+              </div>
+            </a>
+            <a
+              class="gallery_wrapper col"
+              data-src="./assets/barbershop_gallery-6.png"
+            >
+              <img src="./assets/barbershop_gallery-6.png" />
+
+              <div class="view_wrapper position-centered">
+                <img src="./assets/icons/search.svg" alt="" />
+              </div>
+            </a>
+            <a
+              class="gallery_wrapper col"
+              data-src="./assets/barbershop_gallery-7.png"
+            >
+              <img src="./assets/barbershop_gallery-7.png" />
+
+              <div class="view_wrapper position-centered">
+                <img src="./assets/icons/search.svg" alt="" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer
+        class="footer bg-neutral-200 text-primary-200"
+        data-scroll-section
+      >
+        <div class="footer_container container row row-lg-3">
+          <!-- first column -->
+          <div class="footer_col col">
+            <a href="/" class="logo">BARBERO</a>
+
+            <p class="logo_desc">
+              Lorem ipsum dolor sit amet consectetur. Viverra risus nibh
+              pellentesque morbi lobortis nunc. Eu ullamcorper aenean cursus ac.
+              Mauris mauris viverra tempus mattis amet mauris.
+            </p>
+
+            <div class="footer_soc">
+              <a role="button" href="https://www.facebook.com/" class="btn">
+                <img src="./assets/icons/facebook.svg" alt="" />
+              </a>
+              <a role="button" href="https://twitter.com/" class="btn">
+                <img src="./assets/icons/twitter.svg" alt="" />
+              </a>
+              <a role="button" href="https://www.instagram.com/" class="btn">
+                <img src="./assets/icons/instagram.svg" alt="" />
+              </a>
+              <a role="button" href="https://www.linkedin.com" class="btn">
+                <img src="./assets/icons/linkedin.svg" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <!-- second column -->
+          <div class="footer_col col">
+            <!-- headline -->
+            <h6 class="headline fw-600">Instagram</h6>
+
+            <!-- instagram post grid -->
+            <div class="instagram_post row row-xs-4 row-md-8 row-lg-4">
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in1.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in2.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in3.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in4.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in5.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in6.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in7.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in8.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- third column -->
+          <div class="footer_col col">
+            <!-- headline -->
+            <h6 class="headline fw-600">Newsletter</h6>
+
+            <div>
+              <!-- form newsletter -->
+              <form class="form">
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Your email address"
+                  class="form_control"
+                />
+                <button type="submit" class="btn btn-accent-100">
+                  Subscribe
+                </button>
+              </form>
+
+              <p class="newsletter_warning opacity-8">
+                Lorem ipsum dolor sit amet consectetur. Risus volutpat elit
+                consectetur sagittis molestie lobortis tellus velit.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer_extra container bg-neutral-300">
+          <p>© 2023 . mark rencie nolasco</p>
+
+          <ul role="list" class="nav_links">
+            <li class="nav_list">
+              <a href="/" class="nav_link">Home</a>
+            </li>
+            <li class="nav_list">
+              <a href="/about.html" class="nav_link">About</a>
+            </li>
+            <li class="nav_list">
+              <a href="/services.html" class="nav_link">Services</a>
+            </li>
+            <li class="nav_list">
+              <a href="#shop" class="nav_link a_link" data-scroll-to="">Shop</a>
+            </li>
+            <li class="nav_list">
+              <a href="#team" class="nav_link a_link" data-scroll-to="">Team</a>
+            </li>
+            <li class="nav_list">
+              <a href="/contact.html" class="nav_link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+  </body>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+    integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/CSSRulePlugin.min.js"
+    integrity="sha512-TJiE9joKYXjdf5nd0Kkzqt9QOYfp5Hk5W/PaeRmpOd7HYBVdSqpTxJezbfLzJnPrS7HGnalR54WO/hbppgDgkw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/lightgallery.umd.min.js"
+    integrity="sha512-6vFONv+JJD01XArGGqxABRY3Vsm8tKuemThmZYfha9inGIuqPU5OgZP1QizBf0Y3JGPnrofy3jokdebgYNNhEQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script defer type="text/javascript" src="./js/script.js"></script>
+  <script defer type="module" src="./js/lightgallery.js"></script>
+  <script defer type="module" src="./js/swiper.js"></script>
+</html>

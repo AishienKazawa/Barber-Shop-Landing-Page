@@ -1,0 +1,70 @@
+@use "../utils/mixins" as *;
+@use "../utils/placeholders" as *;
+
+#services {
+  $section-padding-x: 7.375rem;
+  isolation: isolate;
+
+  .hero {
+    background-image: url("../../assets/barbershop_hero-bg-d.png");
+    @extend %background-covered;
+    background-position: bottom;
+
+    &_container {
+      padding-block: $section-padding-x;
+      position: relative;
+
+      @include media-query-md {
+        padding: calc($section-padding-x + 10rem) $section-padding-x
+          var(--spacing-96);
+      }
+
+      .headline {
+        font-size: 3rem;
+        @extend %section-headline;
+        margin-bottom: var(--spacing-10);
+      }
+    }
+  }
+
+  .service {
+    height: auto;
+
+    img {
+      height: 100%;
+    }
+
+    @include media-query-md {
+      .service_item:nth-child(even) > *:first-child {
+        order: 2;
+      }
+    }
+
+    .service_item {
+      display: flex;
+      flex-direction: column;
+
+      & > *:first-child {
+        padding: var(--spacing-36) 0;
+
+        @include media-query-lg {
+          padding: var(--spacing-36) var(--spacing-56);
+        }
+
+        .headline {
+          font-size: 3rem;
+          @extend %section-headline;
+          margin-bottom: var(--spacing-24);
+        }
+      }
+
+      & > *:last-child {
+        margin-block: 1.5rem;
+
+        @include media-query-md {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use "./font-face" as *;
+
+// define your variables here
+$ff-primary: "Poppins", sans-serif;
+$ff-secondary: "Lora", serif;
+$ff-tertiary: "georgia";
+
+$font-family: (
+  primary: $ff-primary,
+  secondary: $ff-secondary,
+  tertiary: $ff-tertiary,
+);
+
+//font weight
+$font-weight: (
+  100: 100,
+  200: 200,
+  300: 300,
+  400: 400,
+  500: 500,
+  600: 600,
+  700: 700,
+);
+
+// default font setup as fallback if there's no value defined
+$ff-primary: Arial, Helvetica, sans-serif !default;
+$ff-secondary: Arial, Helvetica, sans-serif !default;
+$ff-tertiary: Arial, Helvetica, sans-serif !default;
+
+$fs-base: 0.875rem !default;
+
+$pgraph-lh: 150% !default;

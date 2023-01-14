@@ -1,0 +1,68 @@
+@use "../utils/mixins" as *;
+@use "../utils/placeholders" as *;
+
+.about_container {
+  height: inherit;
+
+  .container_rs {
+    text-align: center;
+    padding-block: var(--spacing-48);
+    display: grid;
+    gap: var(--spacing-10);
+    height: fit-content;
+
+    @include media-query-md {
+      padding-inline: calc(var(--spacing-96) + 5rem);
+    }
+
+    @include media-query-lg {
+      text-align: left;
+      padding: calc(var(--spacing-96) - 1rem);
+    }
+
+    .about_headings {
+      margin-bottom: var(--spacing-18);
+
+      .headline {
+        font-size: var(--spacing-48);
+        @extend %section-headline;
+      }
+    }
+
+    .separator-double {
+      @include media-query-lg {
+        display: inline-block;
+        width: 2.5rem;
+        height: 4px;
+        position: relative;
+        border-radius: 4px;
+        margin-bottom: var(--spacing-24);
+
+        &::after {
+          content: "";
+          width: 1.3rem;
+          height: 4px;
+          position: absolute;
+          right: -2rem;
+          background-color: inherit;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .signature {
+      width: 50%;
+      margin-inline: auto;
+      margin-top: 1rem;
+
+      @include media-query-md {
+        width: 30%;
+      }
+
+      @include media-query-lg {
+        width: 30%;
+        margin-inline: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,148 @@
+@use "../utils/mixins" as *;
+
+.header {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  display: block;
+
+  &_media {
+    display: none;
+
+    @include media-query-md {
+      display: flex;
+      padding-block: 0.75rem;
+      @include full-bleed(var(--clr-neutral-300));
+
+      .icon-small {
+        width: 1rem;
+      }
+
+      .media_links {
+        gap: 1.5rem;
+      }
+
+      & > * {
+        font-size: 0.625rem;
+        display: flex;
+        gap: 1.125rem;
+
+        & > * {
+          display: flex;
+          gap: 0.5rem;
+        }
+      }
+    }
+  }
+
+  &_nav {
+    position: relative;
+    padding-block: 1rem;
+
+    .nav_menu {
+      padding: 1rem !important;
+      background-color: transparent;
+    }
+    @include media-query-md {
+      justify-content: center;
+
+      .nav_logo {
+        display: none;
+      }
+
+      .nav_menu {
+        display: none;
+      }
+    }
+
+    .backdrop-overlay {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: -105vw;
+      z-index: 1;
+      background-color: hsla(0, 0%, 0%, 0.8);
+
+      @include media-query-md {
+        display: none;
+      }
+    }
+
+    .navbar_nav {
+      width: 75%;
+      height: 105vh;
+
+      position: fixed;
+      top: 0;
+      left: -100vw;
+
+      background-color: #ffffff;
+      z-index: 2;
+
+      @include media-query-md {
+        height: fit-content;
+        position: unset;
+      }
+
+      &-scroll {
+        height: inherit;
+        padding: 2rem 1rem;
+        overflow-y: scroll;
+
+        @include media-query-md {
+          all: unset;
+        }
+
+        .nav_list {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
+          @include media-query-md {
+            flex-direction: row;
+            align-items: center;
+            column-gap: 2rem;
+          }
+
+          .nav_item {
+            padding: 0.5rem;
+
+            &.logo {
+              display: none;
+
+              @include media-query-md {
+                display: block;
+              }
+            }
+
+            &.dropdown {
+              cursor: pointer;
+
+              .dropdown_arrow {
+                width: 1.8rem;
+
+                @include media-query-md {
+                  display: none;
+                }
+              }
+
+              .dropdown-menu {
+                width: 14rem;
+                height: 0;
+                background-color: #ffffff;
+                overflow: hidden;
+
+                @include media-query-md {
+                  margin-top: 1rem;
+                  //border-top: 3px solid var(--clr-accent-100);
+                  position: absolute;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

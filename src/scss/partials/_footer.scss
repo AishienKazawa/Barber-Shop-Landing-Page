@@ -1,0 +1,168 @@
+@use "../global/font" as *;
+@use "../utils/mixins" as *;
+@use "../utils/placeholders" as *;
+
+.footer {
+  &_container {
+    padding-block: var(--spacing-64);
+    row-gap: var(--spacing-36);
+
+    .footer_col {
+      display: grid;
+      grid-template-rows: 1.5rem auto auto;
+      gap: 1rem;
+
+      .headline {
+        font-size: 1rem;
+        font-family: var(--ff-secondary);
+        text-align: center;
+
+        @include media-query-lg {
+          text-align: left;
+        }
+      }
+
+      & > *:first-child {
+        align-self: flex-end;
+      }
+
+      &:first-child {
+        gap: 0.5rem;
+
+        .logo {
+          font-size: 1.5rem;
+          margin: 0 auto;
+
+          @include media-query-lg {
+            margin: 0;
+          }
+        }
+
+        .logo_desc {
+          text-align: center;
+
+          @include media-query-lg {
+            text-align: left;
+          }
+        }
+
+        .footer_soc {
+          margin-top: 1rem;
+          display: flex;
+          justify-content: center;
+          gap: var(--spacing-18);
+
+          @include media-query-lg {
+            justify-content: flex-start;
+          }
+
+          a {
+            height: fit-content;
+            padding: 0.8rem;
+            border: 2px solid var(--clr-primary-200);
+            border-radius: 100rem;
+
+            img {
+              width: 1.25rem;
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        gap: 0.5rem;
+        justify-content: center;
+
+        @include media-query-lg {
+          padding-inline: 6rem;
+          justify-content: flex-start;
+        }
+
+        .instagram_post {
+          padding-inline: 6rem;
+
+          @include media-query-lg {
+            padding-inline: 0;
+          }
+
+          & > * {
+            padding: 0.2rem;
+
+            img {
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        gap: 0.5rem;
+        justify-content: center;
+
+        .form {
+          height: fit-content;
+          margin-bottom: 1rem;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+
+          @include media-query-lg {
+            align-items: unset;
+            flex-direction: row;
+            gap: 0;
+          }
+
+          .form_control {
+            text-align: center;
+            padding-block: 1rem;
+
+            @include media-query-lg {
+              text-align: left;
+            }
+          }
+
+          .btn {
+            border-radius: 100rem;
+
+            @include media-query-lg {
+              border-radius: 0;
+            }
+          }
+        }
+
+        .newsletter_warning {
+          font-size: 0.75rem;
+          text-align: center;
+
+          @include media-query-lg {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+  .footer_extra {
+    font-size: 0.625rem;
+    padding: 0.75rem;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--spacing-24);
+
+    @include media-query-lg {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    @include full-bleed(var(--clr-neutral-300));
+
+    .nav_links {
+      display: flex;
+      gap: var(--spacing-24);
+    }
+  }
+}

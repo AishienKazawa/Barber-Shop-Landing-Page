@@ -1,0 +1,39 @@
+.team_members {
+  .member {
+    & > * {
+      // member img
+      &:first-child {
+        cursor: pointer;
+
+        border: 3px solid var(--clr-primary-200);
+        margin-bottom: var(--spacing-18);
+        overflow: hidden;
+      }
+
+      // member name
+      & > *:first-child {
+        font-family: var(--ff-secondary);
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    }
+
+    &_soc {
+      margin: var(--spacing-12);
+
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-18);
+
+      a {
+        height: fit-content;
+        padding: 0.8rem;
+        border: 2px solid var(--clr-primary-200);
+
+        img {
+          width: 1.5rem;
+        }
+      }
+    }
+  }
+}

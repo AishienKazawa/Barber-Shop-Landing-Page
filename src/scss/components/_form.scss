@@ -1,0 +1,46 @@
+@use "../utils/placeholders" as *;
+@use "../utils/mixins" as *;
+
+.form {
+  display: grid;
+  row-gap: 1rem;
+
+  .row {
+    row-gap: 1rem;
+
+    & > *:not(:first-child):not(:last-child) {
+      padding-inline: 0.5rem;
+    }
+
+    @include media-query-md {
+      & > *:first-child {
+        padding-right: 0.5rem;
+      }
+      & > *:last-child {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+
+  .form_control {
+    width: 100%;
+    padding: 1.3rem;
+    border: none;
+
+    &:focus-within {
+      outline: none;
+    }
+  }
+
+  .btn {
+    padding: 1.25rem 3rem;
+    margin-inline: auto;
+
+    @include media-query-lg {
+      margin-inline: auto 0;
+    }
+  }
+}
+textarea {
+  resize: vertical;
+}

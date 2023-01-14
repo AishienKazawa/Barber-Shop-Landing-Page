@@ -1,0 +1,244 @@
+@use "../global/colors" as *;
+@use "../global/font" as *;
+@use "../utils/mixins" as *;
+@use "../utils/placeholders" as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $fs-base;
+  font-family: $ff-primary;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  overflow-x: hidden; // for class col padding
+}
+
+p {
+  line-height: $pgraph-lh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style-type: none;
+}
+
+button {
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+mark {
+  background-color: transparent;
+}
+
+.container {
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-inline: 1rem;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+}
+
+.flex-items-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.position-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.position-y-centered {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.position-x-centered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// class style for kicker
+.kicker {
+  font-size: 1rem;
+  font-family: georgia;
+  font-weight: 400;
+  margin-bottom: 0.125rem;
+  letter-spacing: 0.3rem;
+}
+
+// contact details card
+.contact_card {
+  width: 100%;
+  padding: 3rem;
+
+  @include media-query-md {
+    width: 28rem;
+  }
+
+  .card_headings {
+    margin-bottom: 2.25rem;
+
+    .kicker {
+      letter-spacing: 0.2rem;
+    }
+    .headline {
+      font-size: 2rem;
+      font-family: var(--ff-secondary);
+    }
+  }
+
+  .contact_details {
+    .contact_item {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: var(--spacing-18);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 2rem;
+      }
+    }
+  }
+}
+
+// form
+.form_wrapper {
+  [class*="headings"] {
+    text-align: center;
+    margin-bottom: var(--spacing-38);
+
+    @include media-query-lg {
+      text-align: left;
+    }
+
+    .headline {
+      @extend %section-headline;
+    }
+  }
+
+  .form {
+    .form_control {
+      font-family: var(--ff-secondary);
+    }
+  }
+}
+
+// schedule card
+.schedule_card {
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+  padding-block: var(--spacing-64);
+
+  border: 2px solid var(--clr-accent-100);
+
+  background-color: hsla(0, 3%, 6%, 0.8);
+  box-shadow: 0 0 0 1.8rem rgba(16, 15, 15, 0.8);
+  z-index: 1;
+  isolation: isolate;
+
+  @include media-query-md {
+    width: 50%;
+  }
+
+  @include media-query-lg {
+    width: fit-content;
+    padding-inline: var(--spacing-96);
+  }
+
+  .schedule_plan {
+    display: grid;
+    place-items: center;
+
+    img {
+      width: 8.125rem;
+      margin-bottom: var(--spacing-18);
+    }
+
+    .schedule_date {
+      text-align: center;
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      p {
+        letter-spacing: 0.2rem;
+      }
+
+      h5 {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+
+        span {
+          display: inline-block;
+          width: 10px;
+          height: 0.2px;
+          border: 2px solid var(--clr-primary-200);
+          margin-inline: 1.5rem;
+        }
+      }
+    }
+  }
+}

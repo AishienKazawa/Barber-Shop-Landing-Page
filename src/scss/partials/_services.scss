@@ -1,0 +1,198 @@
+@use "../utils/mixins" as *;
+@use "../utils/placeholders" as *;
+
+$section-padding-x: 7.375rem;
+
+.service {
+  position: relative;
+  isolation: isolate;
+
+  @include media-query-xl {
+    height: 70vh;
+  }
+
+  &.a {
+    background-image: linear-gradient(
+        180deg,
+        var(--clr-neutral-200) 0%,
+        rgba(45, 44, 43, 0.95) 100%
+      ),
+      url("../../assets/barbershop_service-bg.png");
+    @extend %background-covered;
+    z-index: 1;
+
+    .service-overflow {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      overflow: hidden;
+
+      @include media-query-xl {
+        display: block;
+
+        .bg_asset {
+          width: 45%;
+          position: absolute;
+          bottom: -7rem;
+          right: 7%;
+          opacity: 0.1;
+
+          @media (min-height: 62.5rem) {
+            right: 25%;
+          }
+        }
+      }
+    }
+
+    .service_container {
+      height: inherit;
+
+      @include media-query-xl {
+        padding-inline: $section-padding-x;
+      }
+
+      & > * {
+        position: relative;
+        padding-block: var(--spacing-38);
+
+        // col right side
+        &:last-child {
+          overflow: hidden;
+        }
+
+        .service_headings {
+          text-align: center;
+          margin-block: var(--spacing-24);
+
+          @include media-query-xl {
+            width: 65%;
+            text-align: left;
+            margin-bottom: 0;
+          }
+
+          .headline {
+            font-size: 3.563rem;
+            @extend %section-headline;
+            margin-bottom: 1rem;
+          }
+        }
+
+        .service_card {
+          width: fit-content;
+          padding: var(--spacing-36);
+          margin-inline: auto;
+
+          @include media-query-xl {
+            width: 65%;
+            padding-right: var(--spacing-96);
+            margin-inline: unset;
+
+            position: absolute;
+            bottom: -3rem;
+            left: 3rem;
+          }
+
+          .card_title {
+            font-size: 2rem;
+            font-family: var(--ff-secondary);
+            line-height: 110%;
+            text-align: center;
+            margin-bottom: 1.125rem;
+
+            @include media-query-xl {
+              text-align: left;
+            }
+          }
+
+          .btn {
+            font-family: var(--ff-secondary);
+            padding: 1.125rem 2.375rem;
+            margin-inline: auto;
+
+            @include media-query-xl {
+              margin-inline: 0;
+            }
+          }
+        }
+
+        .service_items {
+          height: fit-content;
+          padding-inline: var(--spacing-36);
+
+          .service_category {
+            --expand: 100%;
+            text-align: center;
+            padding: var(--spacing-24);
+            position: relative;
+
+            @include media-query-xl {
+              text-align: left;
+
+              &::before {
+                content: "";
+                position: absolute;
+                background-color: var(--clr-primary-100);
+                opacity: 0.2;
+              }
+
+              &:nth-child(1) {
+                &::before {
+                  bottom: 0;
+                  right: 0;
+                  width: 1px;
+                  height: var(--expand);
+                }
+              }
+              &:nth-child(2) {
+                &::before {
+                  bottom: 0;
+                  left: 0;
+                  width: var(--expand);
+                  height: 1px;
+                }
+              }
+              &:nth-child(3) {
+                &::before {
+                  top: -1px;
+                  right: 0;
+                  width: var(--expand);
+                  height: 1px;
+                }
+              }
+              &:nth-child(4) {
+                &::before {
+                  top: 0;
+                  left: -1px;
+                  width: 1px;
+                  height: var(--expand);
+                }
+              }
+            }
+
+            .service_icon {
+              width: 4rem;
+              margin: 0 auto var(--spacing-24);
+
+              path {
+                stroke-width: 1.8;
+                stroke: var(--clr-accent-100);
+              }
+
+              @include media-query-xl {
+                margin-inline: 0;
+              }
+            }
+
+            .service_name {
+              font-size: 1.5rem;
+              font-family: var(--ff-secondary);
+              margin-bottom: var(--spacing-10);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@use "../global/colors" as *;
+
+button[type="button"],
+button[type="submit"] {
+  cursor: pointer;
+  width: fit-content;
+  display: block;
+  border: none;
+
+  &.nav_menu {
+    padding: 0.4rem;
+  }
+
+  &.btn {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    color: #ffffff;
+    transition: all 0.2s ease;
+  }
+}

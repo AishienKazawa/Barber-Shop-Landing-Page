@@ -1,0 +1,43 @@
+@use "../global/breakpoints" as *;
+
+@mixin full-bleed($bg) {
+  background-color: $bg;
+  box-shadow: 0 0 0 100vmax $bg;
+  clip-path: inset(0 -100vmax);
+}
+
+@mixin media-query-xs {
+  @media (min-width: map-get($grid-breakpoints, xs)) {
+    @content;
+  }
+}
+
+@mixin media-query-xm {
+  @media (min-width: map-get($grid-breakpoints, xm)) {
+    @content;
+  }
+}
+
+@mixin media-query-md {
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    @content;
+  }
+}
+
+@mixin media-query-lg {
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    @content;
+  }
+}
+
+@mixin media-query-xl {
+  @media (min-width: map-get($grid-breakpoints, xl)) {
+    @content;
+  }
+}
+
+@mixin media-query-xxl {
+  @media (min-width: map-get($grid-breakpoints, xxl)) {
+    @content;
+  }
+}

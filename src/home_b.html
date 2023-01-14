@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage: Demo #2</title>
+
+    <link rel="stylesheet" href="./public/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/css/lightgallery-bundle.min.css"
+      integrity="sha512-nUqPe0+ak577sKSMThGcKJauRI7ENhKC2FQAOOmdyCYSrUh0GnwLsZNYqwilpMmplN+3nO3zso8CWUgu33BDag=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body class="bg-neutral-200" id="home" aria-busy="true">
+    <!-- header -->
+    <header class="header container-fluid fixed-top text-neutral-300">
+      <!-- top bar header -->
+      <div class="header_media container flex-items-between text-primary-200">
+        <!-- contact details -->
+        <div class="media_contact flex-items-between">
+          <div class="contact_item">
+            <img src="./assets/icons/phone.svg" alt="" class="icon-small" />
+            <p>+63 995 403 7689</p>
+          </div>
+          <div class="contact_item">
+            <img src="./assets/icons/at.svg" alt="" class="icon-small" />
+            <p>logoname@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- social media -->
+        <div class="media_platform">
+          <p>follow us:</p>
+          <ul role="list" class="media_links">
+            <li>
+              <a
+                role="button"
+                href="https://www.facebook.com/"
+                class="btn btn-link"
+              >
+                <img
+                  src="./assets/icons/facebook.svg"
+                  alt=""
+                  class="icon-small"
+                />
+              </a>
+            </li>
+            <li>
+              <a role="button" href="https://twitter.com/" class="btn btn-link">
+                <img
+                  src="./assets/icons/twitter.svg"
+                  alt=""
+                  class="icon-small"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                role="button"
+                href="https://www.instagram.com/"
+                class="btn btn-link"
+              >
+                <img
+                  src="./assets/icons/instagram.svg"
+                  alt=""
+                  class="icon-small"
+                />
+              </a>
+            </li>
+
+            <li>
+              <a
+                role="button"
+                href="https://www.linkedin.com"
+                class="btn btn-link"
+              >
+                <img
+                  src="./assets/icons/linkedin.svg"
+                  alt=""
+                  class="icon-small"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- bottom bar header -->
+      <div class="header_nav container flex-items-between">
+        <!-- brandname / logo -->
+        <a href="/" class="nav_logo logo">BARBERO</a>
+
+        <!-- mobile menu -->
+        <button type="button" id="menuBtn" class="nav_menu">
+          <img src="./assets/icons/menu.svg" alt="" />
+        </button>
+
+        <!-- backdrop for mobile -->
+        <div class="backdrop-overlay"></div>
+
+        <!-- nav links -->
+        <div class="navbar_nav">
+          <div class="navbar_nav-scroll">
+            <ul role="list" class="nav_list">
+              <li class="nav_item dropdown">
+                <div class="flex-items-between" id="1">
+                  <a class="nav_link" role="button"> Home </a>
+
+                  <img
+                    src="./assets/icons/arrow_down.svg"
+                    alt=""
+                    class="dropdown_arrow"
+                  />
+                </div>
+
+                <ul role="list" class="dropdown-menu">
+                  <li class="nav_item">
+                    <a href="/" class="nav_link">Homepage #1</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="/home_b.html" class="nav_link">Homepage #2</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="/home_c.html" class="nav_link">Homepage #3</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav_item">
+                <a href="/about.html" class="nav_link">About</a>
+              </li>
+
+              <li class="nav_item dropdown">
+                <div class="flex-items-between">
+                  <a class="nav_link" role="button"> Pages </a>
+
+                  <img
+                    src="./assets/icons/arrow_down.svg"
+                    alt=""
+                    class="dropdown_arrow"
+                  />
+                </div>
+                <ul role="list" class="dropdown-menu">
+                  <li class="nav_item">
+                    <a href="/contact.html" class="nav_link">Contact</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="/services.html" class="nav_link">Services</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="/membership.html" class="nav_link">Membership</a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- logo -->
+              <li class="nav_item logo">
+                <a href="/" class="nav_link">BARBERO</a>
+              </li>
+
+              <li class="nav_item">
+                <a href="#team" class="nav_link a_link" data-scroll-to=""
+                  >Team</a
+                >
+              </li>
+
+              <li class="nav_item">
+                <a href="#price" class="nav_link a_link" data-scroll-to=""
+                  >Price</a
+                >
+              </li>
+
+              <li class="nav_item">
+                <a href="/contact.html" class="nav_link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="loading" id="loading"></div>
+
+    <!-- main -->
+    <main class="text-primary-200" data-scroll-container>
+      <!-- hero section -->
+      <section class="hero b" data-scroll-section>
+        <div class="hero_container container row row-md-2">
+          <div class="hero_headings col-md-9 col-xl-6">
+            <img
+              src="./assets/hero-logo.svg"
+              alt="img centered"
+              class="hero_logo"
+            />
+
+            <div>
+              <h1 class="hero_headline fw-600">
+                We Offer the Best Look On You
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Dictum donec id egestas
+                mattis lacus.
+              </p>
+            </div>
+
+            <button type="button" class="btn btn-accent-100 rounded-circle">
+              New Styles
+            </button>
+          </div>
+
+          <div class="hero_carousel col">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide-video" id="gallery-videos-demo">
+                  <div class="video-play position-centered">
+                    <img src="./assets/icons/play.svg" alt="" />
+                  </div>
+
+                  <p class="video-title">WE GIVE OUR CLIENT SMILE</p>
+
+                  <a
+                    data-lg-size="1280-720"
+                    data-src="https://youtu.be/Mj7KARIRji4"
+                    data-poster="https://youtu.be/Mj7KARIRji4"
+                  >
+                    <img
+                      width="300"
+                      height="100"
+                      class="img-responsive"
+                      src="./assets/barbershop_hero-video-1.png"
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="swiper-slide slide-video"
+                  id="gallery-videos-demo-2"
+                >
+                  <div class="video-play position-centered">
+                    <img src="./assets/icons/play.svg" alt="" />
+                  </div>
+
+                  <p class="video-title">THE QUALITY AND PROFESSIONALS</p>
+
+                  <a
+                    data-lg-size="1280-720"
+                    data-src="https://youtu.be/Mj7KARIRji4"
+                    data-poster="https://youtu.be/W18jsNa8KmA"
+                  >
+                    <img
+                      width="300"
+                      height="100"
+                      class="img-responsive"
+                      src="./assets/barbershop_hero-video-2.png"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- about section -->
+      <section class="about b" data-scroll-section>
+        <div class="about_container container row row-lg-2">
+          <!-- appealing imagery -->
+          <div class="container_ls col" data-scroll data-scroll-speed="2">
+            <img
+              src="./assets/barbershop_about-image.png"
+              alt=""
+              class="ls_img"
+            />
+          </div>
+
+          <!-- story -->
+          <div class="container_rs col text-primary-200">
+            <div class="about_headings">
+              <p class="kicker">BARBER SHOP</p>
+              <h2 class="headline fw-600">
+                <mark class="text-accent-100">Modern</mark> Ways of Barber Shop
+                & Shave
+              </h2>
+            </div>
+
+            <span class="separator-double bg-primary-100"></span>
+            <p class="about_brief">
+              Lorem ipsum dolor sit amet consectetur. Mattis amet nunc euismod
+              ultrices. Donec pretium viverra mauris morbi ultricies feugiat eu.
+              Accumsan nibh sed vestibulum maecenas. Diam auctor sit et massa.
+              Duis sem ultricies et porttitor eleifend tempor. Urna leo id
+              consectetur ornare interdum felis eu pellentesque.
+            </p>
+
+            <img src="./assets/signature.png" alt="" class="signature" />
+          </div>
+        </div>
+      </section>
+
+      <!-- pricing section -->
+      <section class="pricing" id="price" data-scroll-section>
+        <div class="pricing_container container">
+          <!-- headings -->
+          <div class="pricing_headings">
+            <p class="kicker text-accent-100">PRICING</p>
+            <h3 class="fw-600">
+              Our best services that make your value increase
+            </h3>
+          </div>
+
+          <!-- pricing -->
+          <div
+            class="pricing_cards row row-md-2 row-lg-3 gy-xs-2 g-md-2 justify-content-center"
+          >
+            <div class="col">
+              <div class="pricing_category bg-neutral-100">
+                <!-- legend / icon -->
+                <span class="category_legend rounded-circle bg-accent-100">
+                  <img src="./assets/barbershop_pricing-cream.png" alt="" />
+                </span>
+
+                <!-- pricing list -->
+                <div class="pricing_list">
+                  <div class="list_item">
+                    <div class="item_header">
+                      <h6 class="fw-500">Face Cleansing</h6>
+                      <span class="line-dotted"></span>
+                      <h6 class="fw-500">$50</h6>
+                    </div>
+                    <p class="opacity-8 headings">
+                      Lorem ipsum dolor sit amet consectetur. Eget purus euismod
+                      a pretium scelerisque mattis sed nunc.
+                    </p>
+                  </div>
+
+                  <div class="list_item">
+                    <div class="item_header">
+                      <h6 class="fw-500">Facial Dexule</h6>
+                      <span class="line-dotted"></span>
+                      <h6 class="fw-500">$30</h6>
+                    </div>
+                    <p class="opacity-8 headings">
+                      Lorem ipsum dolor sit amet consectetur. Eget purus euismod
+                      a pretium scelerisque mattis sed nunc.
+                    </p>
+                  </div>
+
+                  <div class="list_item">
+                    <div class="item_header">
+                      <h6 class="fw-500">Black Mask</h6>
+                      <span class="line-dotted"></span>
+                      <h6 class="fw-500">$20</h6>
+                    </div>
+                    <p class="opacity-8 headings">
+                      Lorem ipsum dolor sit amet consectetur. Eget purus euismod
+                      a pretium scelerisque mattis sed nunc.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="pricing_category bg-neutral-100">
+                <!-- legend / icon -->
+                <span class="category_legend rounded-circle bg-accent-100">
+                  <img src="./assets/barbershop_pricing-razor.png" alt="" />
+                </span>
+
+                <!-- pricing list -->
+                <div class="pricing_list">
+                  <div class="list_item">
+                    <div class="item_header">
+                      <h6 class="fw-500">Simple Haircut</h6>
+                      <span class="line-dotted"></span>
+                      <h6 class="fw-500">$64</h6>
+                    </div>
+                    <p class="opacity-8">
+                      Lorem ipsum dolor sit amet consectetur. Eget purus euismod
+                      a pretium scelerisque mattis sed nunc.
+                    </p>
+                  </div>
+
+                  <div class="list_item">
+                    <div class="item_header">
+                      <h6 class="fw-500">Stylist Haircut</h6>
+                      <span class="line-dotted"></span>
+                      <h6 class="fw-500">$32</h6>
+                    </div>
+                    <p class="opacity-8">
+                      Lorem ipsum dolor sit amet consectetur. Eget purus euismod
+                      a pretium scelerisque mattis sed nunc.
+                    </p>
+                  </div>
+
+                  <div class="list_item">
+                    <div class="item_header">
+                      <h6 class="fw-500">Shave</h6>
+                      <span class="line-dotted"></span>
+                      <h6 class="fw-500">$23</h6>
+                    </div>
+                    <p class="opacity-8">
+                      Lorem ipsum dolor sit amet consectetur. Eget purus euismod
+                      a pretium scelerisque mattis sed nunc.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="pricing_category bg-neutral-100">
+                <!-- legend / icon -->
+                <span class="category_legend rounded-circle bg-accent-100">
+                  <img src="./assets/barbershop_pricing-dryer.png" alt="" />
+                </span>
+
+                <!-- pricing list -->
+                <div class="pricing_list">
+                  <div class="list_item">
+                    <div class="item_header">
+                      <h6 class="fw-500">Hair Color</h6>
+                      <span class="line-dotted"></span>
+                      <h6 class="fw-500">$20</h6>
+                    </div>
+                    <p class="opacity-8">
+                      Lorem ipsum dolor sit amet consectetur. Eget purus euismod
+                      a pretium scelerisque mattis sed nunc.
+                    </p>
+                  </div>
+
+                  <div class="list_item">
+                    <div class="item_header">
+                      <h6 class="fw-500">Bear Color</h6>
+                      <span class="line-dotted"></span>
+                      <h6 class="fw-500">$20</h6>
+                    </div>
+                    <p class="opacity-8">
+                      Lorem ipsum dolor sit amet consectetur. Eget purus euismod
+                      a pretium scelerisque mattis sed nunc.
+                    </p>
+                  </div>
+
+                  <div class="list_item">
+                    <div class="item_header">
+                      <h6 class="fw-500">Just for Men</h6>
+                      <span class="line-dotted"></span>
+                      <h6 class="fw-500">$20</h6>
+                    </div>
+                    <p class="opacity-8">
+                      Lorem ipsum dolor sit amet consectetur. Eget purus euismod
+                      a pretium scelerisque mattis sed nunc.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- booking section -->
+      <section class="git b" data-scroll-section>
+        <!-- booking content -->
+        <div class="git_container container row">
+          <!-- form -->
+          <div class="form_wrapper col-md-8 col-lg-6">
+            <!-- headings -->
+            <div class="form_headings">
+              <p class="kicker text-accent-100">BE OUR GUEST</p>
+              <h3 class="headline">Book a Seat</h3>
+            </div>
+
+            <form class="form">
+              <div class="row row-md-2">
+                <div class="col">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Name"
+                    class="form_control"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Email Address"
+                    class="form_control"
+                  />
+                </div>
+              </div>
+
+              <div class="row row-md-2">
+                <div class="col">
+                  <input
+                    type="text"
+                    name="contact"
+                    id="contact"
+                    placeholder="Contact Number"
+                    class="form_control"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="text"
+                    name="date"
+                    id="date"
+                    placeholder="Date"
+                    class="form_control"
+                  />
+                </div>
+              </div>
+
+              <div class="col">
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="8"
+                  placeholder="Your message here..."
+                  class="form_control"
+                ></textarea>
+              </div>
+
+              <div class="col submit">
+                <button type="submit" class="btn btn-accent-100 rounded-circle">
+                  Book Now
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- team section -->
+      <section class="team b" id="team" data-scroll-section>
+        <div class="team_container container">
+          <div class="team_headings">
+            <p class="kicker text-accent-100">PROFESSIONALS</p>
+            <h3 class="headline fw-600">Our Licensed Barbers</h3>
+          </div>
+
+          <div
+            class="team_members row row-md-2 row-lg-3 g-xs-2 g-md-2 justify-content-center"
+          >
+            <div class="member col">
+              <div class="img_wrapper scaling">
+                <img src="./assets/barbershop_team-member-1-b.png" alt="" />
+              </div>
+
+              <div class="position-x-centered">
+                <h5 class="member_name fw-600">Robert Jam</h5>
+                <div class="member_soc">
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/twitter.svg" alt="" />
+                  </a>
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/facebook.svg" alt="" />
+                  </a>
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/instagram.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="member col">
+              <div class="img_wrapper scaling">
+                <img src="./assets/barbershop_team-member-2-b.png" alt="" />
+              </div>
+
+              <div class="position-x-centered">
+                <h5 class="member_name fw-600">Samuel Miko</h5>
+                <div class="member_soc">
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/twitter.svg" alt="" />
+                  </a>
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/facebook.svg" alt="" />
+                  </a>
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/instagram.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="member col">
+              <div class="img_wrapper scaling">
+                <img src="./assets/barbershop_team-member-3-b.png" alt="" />
+              </div>
+
+              <div class="position-x-centered">
+                <h5 class="member_name fw-600">Danny Franks</h5>
+                <div class="member_soc">
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/twitter.svg" alt="" />
+                  </a>
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/facebook.svg" alt="" />
+                  </a>
+                  <a role="button" href="" class="btn rounded-circle">
+                    <img src="./assets/icons/instagram.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- testimonial section -->
+      <section class="testimonial b" data-scroll-section>
+        <!-- centered logo -->
+        <img
+          src="./assets/schedule-logo.svg"
+          alt=""
+          class="bg_asset position-centered opacity-1"
+        />
+
+        <!-- swiper testimonials -->
+        <div class="swiper testimonial_swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide client_body">
+              <div class="client_testimony">
+                Lorem ipsum dolor sit amet consectetur. Ut purus duis imperdiet
+                mauris semper malesuada volutpat. Aliquet fusce condimentum orci
+                gravida. Malesuada amet diam rhoncus massa aliquet posuere
+                pellentesque.
+              </div>
+
+              <h3 class="client_name text-accent-100 fw-600">Thomas Drake</h3>
+              <p class="client_position">CEO, Squarefond</p>
+            </div>
+
+            <div class="swiper-slide client_body">
+              <div class="client_testimony">
+                Lorem ipsum dolor sit amet consectetur. Ut purus duis imperdiet
+                mauris semper malesuada volutpat. Aliquet fusce condimentum orci
+                gravida. Malesuada amet diam rhoncus massa aliquet posuere
+                pellentesque.
+              </div>
+
+              <h3 class="client_name text-accent-100 fw-600">Allison Marget</h3>
+              <p class="client_position">CEO, Squarefond</p>
+            </div>
+
+            <div class="swiper-slide client_body">
+              <div class="client_testimony">
+                Lorem ipsum dolor sit amet consectetur. Ut purus duis imperdiet
+                mauris semper malesuada volutpat. Aliquet fusce condimentum orci
+                gravida. Malesuada amet diam rhoncus massa aliquet posuere
+                pellentesque.
+              </div>
+
+              <h3 class="client_name text-accent-100 fw-600">Drake Sorrow</h3>
+              <p class="client_position">Graphic Design</p>
+            </div>
+          </div>
+
+          <div class="swiper-button-next bg-accent-100"></div>
+          <div class="swiper-button-prev bg-accent-100"></div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- get in touch section -->
+      <section class="git b" data-scroll-section>
+        <div class="git_container b container row row-lg-2">
+          <!--left side -->
+          <div class="col" data-scroll data-scroll-speed="1">
+            <div
+              class="contact_card card bg-neutral-200"
+              data-scroll
+              data-scroll-speed="2"
+            >
+              <!-- headings -->
+              <div class="card_headings">
+                <p class="kicker text-accent-100">BARBER SHOP</p>
+                <h3 class="headline text-primary-200 fw-600">Get in Touch</h3>
+              </div>
+
+              <!-- touch list -->
+              <ul role="list" class="contact_details text-primary-200">
+                <li class="contact_item">
+                  <img src="./assets/icons/rounded-location.svg" alt="" />shop
+                  complete address
+                </li>
+                <li class="contact_item">
+                  <img
+                    src="./assets/icons/rounded-email.svg"
+                    alt=""
+                  />logoname@gmail.com
+                </li>
+                <li class="contact_item">
+                  <img src="./assets/icons/rounded-phone.svg" alt="" />+63 995
+                  403 7685
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- right side -->
+          <div class="form_wrapper col-md-8 col-lg-6">
+            <!-- headings -->
+            <div class="form_headings">
+              <p class="kicker text-accent-100">BE OUR GUEST</p>
+              <h3 class="headline">Book a Seat</h3>
+            </div>
+
+            <!-- form -->
+            <div class="form_wrapper">
+              <form class="form">
+                <div class="row row-md-2">
+                  <div class="col">
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Name"
+                      class="form_control"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      name="email"
+                      id="email"
+                      placeholder="Email Address"
+                      class="form_control"
+                    />
+                  </div>
+                </div>
+
+                <div class="row row-md-2">
+                  <div class="col">
+                    <input
+                      type="text"
+                      name="contact"
+                      id="contact"
+                      placeholder="Contact Number"
+                      class="form_control"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      name="date"
+                      id="date"
+                      placeholder="Date"
+                      class="form_control"
+                    />
+                  </div>
+                </div>
+
+                <div class="col">
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="8"
+                    placeholder="Your message here..."
+                    class="form_control"
+                  ></textarea>
+                </div>
+
+                <div class="col submit">
+                  <button
+                    type="submit"
+                    class="btn btn-accent-100 rounded-circle"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- gallery section -->
+      <section
+        class="gallery gallery-grid b row row-xs-2 row-md-6"
+        id="lightgallery"
+        data-scroll-section
+      >
+        <a
+          class="gallery_wrapper col"
+          data-src="./assets/barbershop_gallery-1.png"
+        >
+          <img src="./assets/barbershop_gallery-1.png" />
+
+          <div class="view_wrapper position-centered">
+            <img src="./assets/icons/search.svg" alt="" />
+          </div>
+        </a>
+
+        <a
+          class="gallery_wrapper col"
+          data-src="./assets/barbershop_gallery-2.png"
+        >
+          <img src="./assets/barbershop_gallery-2.png" />
+
+          <div class="view_wrapper position-centered">
+            <img src="./assets/icons/search.svg" alt="" />
+          </div>
+        </a>
+
+        <a
+          class="gallery_wrapper col"
+          data-src="./assets/barbershop_gallery-3.png"
+        >
+          <img src="./assets/barbershop_gallery-3.png" />
+
+          <div class="view_wrapper position-centered">
+            <img src="./assets/icons/search.svg" alt="" />
+          </div>
+        </a>
+
+        <a
+          class="gallery_wrapper col"
+          data-src="./assets/barbershop_gallery-4.png"
+        >
+          <img src="./assets/barbershop_gallery-4.png" />
+
+          <div class="view_wrapper position-centered">
+            <img src="./assets/icons/search.svg" alt="" />
+          </div>
+        </a>
+
+        <a
+          class="gallery_wrapper col"
+          data-src="./assets/barbershop_gallery-5.png"
+        >
+          <img src="./assets/barbershop_gallery-5.png" />
+
+          <div class="view_wrapper position-centered">
+            <img src="./assets/icons/search.svg" alt="" />
+          </div>
+        </a>
+
+        <a
+          class="gallery_wrapper col"
+          data-src="./assets/barbershop_gallery-6.png"
+        >
+          <img src="./assets/barbershop_gallery-6.png" />
+
+          <div class="view_wrapper position-centered">
+            <img src="./assets/icons/search.svg" alt="" />
+          </div>
+        </a>
+      </section>
+
+      <!-- footer -->
+      <footer
+        class="footer bg-neutral-200 text-primary-200"
+        data-scroll-section
+      >
+        <div class="footer_container container row row-lg-3">
+          <!-- first column -->
+          <div class="footer_col col">
+            <a href="/" class="logo">BARBERO</a>
+
+            <p class="logo_desc">
+              Lorem ipsum dolor sit amet consectetur. Viverra risus nibh
+              pellentesque morbi lobortis nunc. Eu ullamcorper aenean cursus ac.
+              Mauris mauris viverra tempus mattis amet mauris.
+            </p>
+
+            <div class="footer_soc">
+              <a role="button" href="https://www.facebook.com/" class="btn">
+                <img src="./assets/icons/facebook.svg" alt="" />
+              </a>
+              <a role="button" href="https://twitter.com/" class="btn">
+                <img src="./assets/icons/twitter.svg" alt="" />
+              </a>
+              <a role="button" href="https://www.instagram.com/" class="btn">
+                <img src="./assets/icons/instagram.svg" alt="" />
+              </a>
+              <a role="button" href="https://www.linkedin.com" class="btn">
+                <img src="./assets/icons/linkedin.svg" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <!-- second column -->
+          <div class="footer_col col">
+            <!-- headline -->
+            <h6 class="headline fw-600">Instagram</h6>
+
+            <!-- instagram post grid -->
+            <div class="instagram_post row row-xs-4 row-md-8 row-lg-4">
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in1.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in2.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in3.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in4.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in5.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in6.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in7.png" alt="" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="#">
+                  <img src="./assets/barbershop_footer-in8.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- third column -->
+          <div class="footer_col col">
+            <!-- headline -->
+            <h6 class="headline fw-600">Newsletter</h6>
+
+            <div>
+              <!-- form newsletter -->
+              <form class="form">
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Your email address"
+                  class="form_control"
+                />
+                <button type="submit" class="btn btn-accent-100">
+                  Subscribe
+                </button>
+              </form>
+
+              <p class="newsletter_warning opacity-8">
+                Lorem ipsum dolor sit amet consectetur. Risus volutpat elit
+                consectetur sagittis molestie lobortis tellus velit.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer_extra container bg-neutral-300">
+          <p>© 2022 . mark rencie nolasco</p>
+
+          <ul role="list" class="nav_links">
+            <li class="nav_list">
+              <a href="/" class="nav_link">Home</a>
+            </li>
+            <li class="nav_list">
+              <a href="/about.html" class="nav_link">About</a>
+            </li>
+            <li class="nav_list">
+              <a href="/services.html" class="nav_link">Services</a>
+            </li>
+            <li class="nav_list">
+              <a href="#price" class="nav_link a_link" data-scroll-to=""
+                >Price</a
+              >
+            </li>
+            <li class="nav_list">
+              <a href="#team" class="nav_link a_link" data-scroll-to="">Team</a>
+            </li>
+            <li class="nav_list">
+              <a href="/contact.html" class="nav_link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+  </body>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+    integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/CSSRulePlugin.min.js"
+    integrity="sha512-TJiE9joKYXjdf5nd0Kkzqt9QOYfp5Hk5W/PaeRmpOd7HYBVdSqpTxJezbfLzJnPrS7HGnalR54WO/hbppgDgkw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/lightgallery.umd.min.js"
+    integrity="sha512-6vFONv+JJD01XArGGqxABRY3Vsm8tKuemThmZYfha9inGIuqPU5OgZP1QizBf0Y3JGPnrofy3jokdebgYNNhEQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script defer type="text/javascript" src="./js/script.js"></script>
+  <script defer type="module" src="./js/lightgallery.js"></script>
+  <script defer type="text/javascript" src="./js/swiper.js"></script>
+</html>
