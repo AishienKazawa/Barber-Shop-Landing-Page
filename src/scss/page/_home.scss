@@ -161,6 +161,7 @@
                   .video-play {
                     width: 3rem;
                     height: auto;
+                    pointer-events: none;
                   }
 
                   .video-title {
@@ -168,6 +169,7 @@
                     position: absolute;
                     bottom: 5%;
                     right: 5%;
+                    pointer-events: none;
                   }
 
                   img {
