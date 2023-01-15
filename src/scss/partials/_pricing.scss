@@ -77,9 +77,13 @@
             }
 
             p {
-              width: 70%;
+              width: 100%;
               font-size: 0.75rem;
               text-align: left;
+
+              @include media-query-md {
+                width: 70%;
+              }
             }
           }
         }

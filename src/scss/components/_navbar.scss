@@ -134,7 +134,7 @@
                 overflow: hidden;
 
                 @include media-query-md {
-                  margin-top: 1rem;
+                  padding-top: 1rem;
                   //border-top: 3px solid var(--clr-accent-100);
                   position: absolute;
                 }

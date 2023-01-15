@@ -239,6 +239,7 @@
             position: relative;
             overflow: hidden;
             display: none;
+            order: 0;
 
             @include media-query-md {
               display: block;
