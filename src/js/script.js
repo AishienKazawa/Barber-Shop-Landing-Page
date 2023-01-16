@@ -659,9 +659,14 @@ ddToggle.forEach((el) => {
       alpha: 0,
     });
 
+    gsap.set(ddMenu, {
+      y: -10,
+      x: 0,
+    });
+
     gsap.to(ddMenu, {
       height: "auto",
-      x: 0,
+      y: 0,
       alpha: 1,
       //ease: "back.out(3)",
       ease: "power3.out",
@@ -690,7 +695,7 @@ ddToggle.forEach((el) => {
 
     gsap.to(ddMenu, {
       height: 0,
-      x: -100,
+      y: -10,
       alpha: 0,
       //ease: "back.out(3)",
       ease: "power3.out",
