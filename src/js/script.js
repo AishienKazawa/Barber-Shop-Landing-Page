@@ -648,13 +648,17 @@ $(".backdrop-overlay").click(function () {
 // dropdown
 const ddToggle = gsap.utils.toArray(".dropdown");
 
+const ddToggleTL = gsap.timeline({ paused: true });
+
 ddToggle.forEach((el) => {
   $(el).mouseenter(function () {
     let ddMenu = el.querySelector(".dropdown-menu");
-    gsap.set(ddMenu, {
+
+    gsap.set([ddMenu, ddMenu.querySelectorAll(".nav_item")], {
       x: -100,
       alpha: 0,
     });
+
     gsap.to(ddMenu, {
       height: "auto",
       x: 0,
@@ -663,10 +667,26 @@ ddToggle.forEach((el) => {
       ease: "power3.out",
       duration: 0.7,
     });
+
+    gsap.to(ddMenu.querySelectorAll(".nav_item"), {
+      x: 0,
+      alpha: 1,
+      stagger: {
+        each: 0.1,
+      },
+    });
   });
 
   $(el).mouseleave(function () {
     let ddMenu = el.querySelector(".dropdown-menu");
+
+    gsap.to(ddMenu.querySelectorAll(".nav_item"), {
+      x: -100,
+      alpha: 0,
+      stagger: {
+        each: 0.1,
+      },
+    });
 
     gsap.to(ddMenu, {
       height: 0,
