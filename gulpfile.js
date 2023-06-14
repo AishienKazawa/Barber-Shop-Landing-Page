@@ -5,7 +5,14 @@ const cssnano = require("cssnano");
 const terser = require("gulp-terser");
 const browsersync = require("browser-sync").create();
 
-//SASS Task
+
+// copy HTML files to the public folder
+function htmlTask() {
+  return src("./src/*.html")
+    .pipe(dest("./src/public"));
+}
+
+// sass Task
 function scssTask() {
   return src("./src/scss/style.scss", { sourcemaps: true })
     .pipe(sass())
@@ -13,14 +20,20 @@ function scssTask() {
     .pipe(dest("./src/public", { sourcemaps: "." }));
 }
 
-//Javascript task
+// javascript task
 function jsTask() {
   return src("./src/js/script.js", { sourcemaps: true })
     .pipe(terser())
     .pipe(dest("./src/public", { sourcemaps: "." }));
 }
 
-//Browsersync Task
+// copy assets folder to the public folder
+function assetsTask() {
+  return src("./src/assets/**/*")
+    .pipe(dest("./src/public/assets"));
+}
+
+// browsersync Task
 function browsersyncServe(cb) {
   browsersync.init({
     server: {
@@ -46,5 +59,4 @@ function watchTask() {
 }
 
 // Default Gulp task
-exports.default = series(scssTask, jsTask, browsersyncServe, watchTask);
-
+exports.default = series(htmlTask, scssTask, jsTask, assetsTask, browsersyncServe, watchTask);
