@@ -1,0 +1,8 @@
+[build]
+  publish = "public" # Specify the publish directory as "public"
+
+[build.environment]
+  NODE_VERSION = "9.5.1" # Specify the Node.js version used in your project
+
+[[plugins]]
+  package = "netlify-plugin-inline-source" # Optional: Inlines source maps for easier debugging
