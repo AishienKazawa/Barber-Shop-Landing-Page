@@ -10,14 +10,14 @@ function scssTask() {
   return src("./src/scss/style.scss", { sourcemaps: true })
     .pipe(sass())
     .pipe(postcss([cssnano()]))
-    .pipe(dest("./dist/css", { sourcemaps: "." }));
+    .pipe(dest("./src/public", { sourcemaps: "." }));
 }
 
 //Javascript task
 function jsTask() {
   return src("./src/js/script.js", { sourcemaps: true })
     .pipe(terser())
-    .pipe(dest("./dist/js", { sourcemaps: "." }));
+    .pipe(dest("./src/public", { sourcemaps: "." }));
 }
 
 //Browsersync Task
