@@ -1,5 +1,5 @@
 [build]
-  publish = "public" # Specify the publish directory as "public"
+  publish = "dist" # Specify the publish directory as "dist"
 
 [build.environment]
   NODE_VERSION = "9.5.1" # Specify the Node.js version used in your project
