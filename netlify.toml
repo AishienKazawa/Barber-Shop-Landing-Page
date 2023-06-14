@@ -1,0 +1,3 @@
+[build]
+  command = "netlify-build gulp"
+  publish = "src/public"
