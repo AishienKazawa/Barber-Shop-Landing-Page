@@ -5,13 +5,6 @@ const cssnano = require("cssnano");
 const terser = require("gulp-terser");
 const browsersync = require("browser-sync").create();
 
-
-// copy HTML files to the public folder
-function htmlTask() {
-  return src("./src/*.html")
-    .pipe(dest("./src/public"));
-}
-
 // sass Task
 function scssTask() {
   return src("./src/scss/style.scss", { sourcemaps: true })
@@ -25,12 +18,6 @@ function jsTask() {
   return src("./src/js/script.js", { sourcemaps: true })
     .pipe(terser())
     .pipe(dest("./src/public", { sourcemaps: "." }));
-}
-
-// copy assets folder to the public folder
-function assetsTask() {
-  return src("./src/assets/**/*")
-    .pipe(dest("./src/public/assets"));
 }
 
 // browsersync Task
@@ -59,4 +46,4 @@ function watchTask() {
 }
 
 // Default Gulp task
-exports.default = series(htmlTask, scssTask, jsTask, assetsTask, browsersyncServe, watchTask);
+exports.default = series(scssTask, jsTask, browsersyncServe, watchTask);
