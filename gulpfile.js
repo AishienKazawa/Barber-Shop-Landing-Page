@@ -7,24 +7,24 @@ const browsersync = require("browser-sync").create();
 
 // sass Task
 function scssTask() {
-  return src("./src/scss/style.scss", { sourcemaps: true })
+  return src("/src/scss/style.scss", { sourcemaps: true })
     .pipe(sass())
     .pipe(postcss([cssnano()]))
-    .pipe(dest("./src/public", { sourcemaps: "." }));
+    .pipe(dest("/src/public", { sourcemaps: "." }));
 }
 
 // javascript task
 function jsTask() {
-  return src("./src/js/script.js", { sourcemaps: true })
+  return src("/src/js/script.js", { sourcemaps: true })
     .pipe(terser())
-    .pipe(dest("./src/public", { sourcemaps: "." }));
+    .pipe(dest("/src/public", { sourcemaps: "." }));
 }
 
 // browsersync Task
 function browsersyncServe(cb) {
   browsersync.init({
     server: {
-      baseDir: "./src",
+      baseDir: "/src",
     },
     browser: "firefox",
   });
@@ -38,9 +38,9 @@ function browsersyncReload(cb) {
 
 //Watch Task
 function watchTask() {
-  watch("./src/*.html", browsersyncReload);
+  watch("/src/*.html", browsersyncReload);
   watch(
-    ["./src/scss/**/*.scss", "./src/js/**/*.js"],
+    ["/src/scss/**/*.scss", "/src/js/**/*.js"],
     series(scssTask, jsTask, browsersyncReload)
   );
 }
