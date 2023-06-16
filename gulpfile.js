@@ -45,5 +45,8 @@ function watchTask() {
   );
 }
 
-// Default Gulp task
+// default Gulp task
 exports.default = series(scssTask, jsTask, browsersyncServe, watchTask);
+
+// build gulp task
+exports.build = series(scssTask, jsTask);
