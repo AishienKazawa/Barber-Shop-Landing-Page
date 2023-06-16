@@ -28,6 +28,6 @@ Here are some resources that may be helpful for working with the technologies us
 
 ## Hosted Version
 
-A live version of the Barber Shop Landing Page is available [here](https://barbero-shop.netlify.app/).
+A live version of the Barber Shop Landing Page is available [here](https://barber-shop-landing-page.vercel.app/).
 
 
