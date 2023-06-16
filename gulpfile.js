@@ -4,7 +4,6 @@ const postcss = require("gulp-postcss");
 const cssnano = require("cssnano");
 const terser = require("gulp-terser");
 const browsersync = require("browser-sync").create();
-const { spawn } = require("child_process");
 
 // sass Task
 function scssTask() {
@@ -37,14 +36,6 @@ function browsersyncReload(cb) {
   cb();
 }
 
-// Netlify Edge Functions Task
-function netlifyFunctions(cb) {
-  spawn("netlify", ["functions:build"], { stdio: "inherit" }).on(
-    "close",
-    cb
-  );
-}
-
 //Watch Task
 function watchTask() {
   watch("./src/*.html", browsersyncReload);
@@ -58,4 +49,4 @@ function watchTask() {
 exports.default = series(scssTask, jsTask, browsersyncServe, watchTask);
 
 // build gulp task
-exports.build = series(scssTask, jsTask, netlifyFunctions);
+exports.build = series(scssTask, jsTask);
