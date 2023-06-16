@@ -36,6 +36,14 @@ function browsersyncReload(cb) {
   cb();
 }
 
+// Netlify Edge Functions Task
+function netlifyFunctions(cb) {
+  spawn("netlify", ["functions:build"], { stdio: "inherit" }).on(
+    "close",
+    cb
+  );
+}
+
 //Watch Task
 function watchTask() {
   watch("./src/*.html", browsersyncReload);
@@ -49,4 +57,4 @@ function watchTask() {
 exports.default = series(scssTask, jsTask, browsersyncServe, watchTask);
 
 // build gulp task
-exports.build = series(scssTask, jsTask);
+exports.build = series(scssTask, jsTask, netlifyFunctions);
